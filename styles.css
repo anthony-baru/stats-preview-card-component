@@ -26,7 +26,7 @@ body {
     ". title title title image image"
     ". subtitle subtitle subtitle image image"
     ". companies-stat templates-stat queries-stat image image";
-  margin: 10% auto 0 auto;
+  margin: 1% auto 0 auto;
   width: 60%;
   border-radius: var(--border-radius-main);
   background-color: var(--background-color-main);
