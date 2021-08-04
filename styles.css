@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&family=Lexend+Deca&display=swap");
+
+:root {
+  --background-color-main: hsl(244, 38%, 16%);
+  --border-radius-main: 10px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+  background-color: hsl(233, 47%, 7%);
+  font-family: "Inter", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
+  color: white;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 1fr 1fr 1.5fr 2fr;
+  grid-template-rows: 3fr 4fr 2fr;
+  grid-template-areas:
+    ". title title title image image"
+    ". subtitle subtitle subtitle image image"
+    ". companies-stat templates-stat queries-stat image image";
+  margin: 10% auto 0 auto;
+  width: 60%;
+  border-radius: var(--border-radius-main);
+  background-color: var(--background-color-main);
+}
+
+.container__description {
+  grid-area: title;
+  color: white;
+  margin-top: 3rem;
+}
+
+#insights {
+  color: hsl(277, 64%, 61%);
+}
+
+.container__subtitle {
+  grid-area: subtitle;
+  color: hsla(0, 0%, 100%, 0.75);
+  margin-top: 2rem;
+  padding-right: 2rem;
+}
+
+.container__companies {
+  grid-area: companies-stat;
+}
+.container__templates {
+  grid-area: templates-stat;
+}
+.container__queries {
+  grid-area: queries-stat;
+}
+/* h3 */
+.item--description {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+/* h4 */
+.item--count {
+  font-size: larger;
+  font-weight: 800;
+  color: white;
+}
+.container__image {
+  grid-area: image;
+  background-image: linear-gradient(
+      to bottom,
+      hsla(277, 64%, 61%, 0.6),
+      hsla(277, 64%, 61%, 0.6)
+    ),
+    url("./images/image-header-desktop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0 var(--border-radius-main) var(--border-radius-main) 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 1rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    height: 120vh;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 1fr 0.5fr 0.5fr 0.5fr;
+    grid-template-areas:
+      "image"
+      "title"
+      "subtitle"
+      "companies-stat"
+      "templates-stat "
+      "queries-stat";
+    text-align: center;
+    border-radius: var(--border-radius-main);
+  }
+
+  .container__subtitle {
+    margin-bottom: 2rem;
+  }
+
+  .item--count {
+    font-size: large;
+  }
+
+  .item--description {
+    font-size: 13px;
+    font-weight: 300;
+  }
+  .container__image {
+    border-radius: var(--border-radius-main) var(--border-radius-main) 0 0;
+  }
+}
