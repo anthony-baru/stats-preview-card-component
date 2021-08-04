@@ -109,10 +109,12 @@ body {
       "queries-stat";
     text-align: center;
     border-radius: var(--border-radius-main);
+    width: 90%;
   }
 
   .container__subtitle {
     margin-bottom: 2rem;
+    padding: 0;
   }
 
   .item--count {
